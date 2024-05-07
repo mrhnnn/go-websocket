@@ -9,10 +9,9 @@ import (
 func main() {
 	e := echo.New()
 
-    e.GET("/cek", func(c echo.Context)error{
-        return c.JSON(http.StatusOK, map[string]interface{}{"Tai": "Kucing"})
-    })
+	e.GET("/cek", func(c echo.Context) error {
+		return c.JSON(http.StatusOK, map[string]interface{}{"Tai": "Kucing"})
+	})
 
-
-    e.Logger.Fatal(e.Start(":8000"))
+	e.Logger.Fatal(e.Start(":8000"))
 }
